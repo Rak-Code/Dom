@@ -1,6 +1,5 @@
-let h1 = document.querySelector(".h1");
-let p = document.querySelector(".p");
+// 
 
-let val = document.querySelector("#content").innerHTML;
-
-console.log(val);
+for(let i = 1; i <= 10; i++) {
+    console.log(2," x ", i," = ", 2 * i);
+}

@@ -5,31 +5,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .red{
+            color: blue;
+        }
+        .dark{
+            background-color: black;
+            color: white;
+        }
+    </style>
 </head>
 
 <body>
-    <script src="dom.js"></script>
 
-    
+
+
+    <button type="button">Switch</button>
     <h1 class="h1">Hello</h1>
-    <p class="p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias quia aperiam sunt ullam ipsam corrupti eum ea
+    <p class="p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias quia aperiam sunt ullam ipsam
+        corrupti eum ea
         totam ex, ad aliquid modi sequi. Doloribus asperiores atque maiores accusantium optio provident?
         Numquam, possimus pariatur? Aut mollitia officiis, rem ipsa dolorum quidem sint eligendi, corporis asperiores,
         eum vero voluptates cum impedit deserunt dolor doloremque voluptate aliquam explicabo quasi cupiditate. Dolorem,
         sequi tempore!</p>
 
-        <ol>
-            <li class="element">Hello World 1</li>
-            <li class="element">Hello World 2</li>
-            <li class="element">Hello World 3</li>
-            <li class="element">Hello World 4</li>
-        </ol>
+    <ol>
+        <li class="element">Hello World 1</li>
+        <li class="element">Hello World 2</li>
+        <li class="element">Hello World 3</li>
+        <li class="element">Hello World 4</li>
+    </ol>
 
-        <p id="content">Hello<span>World</span></p>
-        
-        
-        
-<script src="dom.js"></script>
+    <p id="content">Hello<span>World</span></p>
+    <p id="twotable"></p>
+
+
+
+     
+
+<script>
+    let parent = document.querySelector("#twotable");
+            for (let i = 1; i <= 10; i++) {
+              const p = document.createElement('p');
+              p.appendChild(document.createTextNode(`2 x ${i} = ${2 * i}`));
+              parent.appendChild(p);
+    
+            }
+    
+            let val = (event) => {
+                event.currentTarget.parentElement.classList.toggle("dark");
+            }
+            button = document.querySelector('button');
+            button.addEventListener("click",val)
+    
+         
+    
+        </script>
 </body>
 
 </html>
